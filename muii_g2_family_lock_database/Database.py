@@ -1,12 +1,12 @@
 import psycopg2
 
-from database.constants.db_conf import *
-from database.constants.literals import *
-from database.queries.account_queries import *
-from database.queries.door_queries import *
-from database.queries.historic_queries import *
-from database.queries.legitimate_queries import *
-from database.queries.location_queries import *
+from muii_g2_family_lock_database.constants.db_conf import *
+from muii_g2_family_lock_database.constants.literals import *
+from muii_g2_family_lock_database.queries.account_queries import *
+from muii_g2_family_lock_database.queries.door_queries import *
+from muii_g2_family_lock_database.queries.historic_queries import *
+from muii_g2_family_lock_database.queries.legitimate_queries import *
+from muii_g2_family_lock_database.queries.location_queries import *
 
 
 class PostgresDB:

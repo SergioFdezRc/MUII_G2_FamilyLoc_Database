@@ -12,9 +12,9 @@ setup(
     author_email='s.fernandez.rincon@gmail.com',
     description='Proyecto con una base de datos común para todas las APIs del proyecto.',
     packages=[
-        'database',
-        'database/queries',
-        'database/constants',
+        'muii_g2_family_lock_database',
+        'muii_g2_family_lock_database/queries',
+        'muii_g2_family_lock_database/constants',
     ],
     install_requires=install_requires
 )
