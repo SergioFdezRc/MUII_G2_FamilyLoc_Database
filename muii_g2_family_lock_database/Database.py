@@ -259,14 +259,14 @@ class PostgresDB:
                 self.close()
                 return "Failed when trying to get a legitimate person. Error =>  {}".format(error)
 
-    def add_legitimate_person(self, person_mac, person_name, person_phone_number, notification, dest_mac):
+    def add_legitimate_person(self, person_mac, person_name, person_phone_number, notification, relation):
         self.connect()
         try:
             self.__execute(NEW_LEGITIMATE_PERSON, {PERSON_MAC: person_mac,
                                                    PERSON_NAME: person_name,
                                                    PERSON_PHONE_NUMBER: person_phone_number,
                                                    NOTIFICATION: notification,
-                                                   DEST_MAC: dest_mac})
+                                                   RELATION: relation})
             self.close()
         except(Exception, psycopg2.Error) as error:
             if self.conn:

@@ -14,5 +14,5 @@ PERSON_MAC = "person_mac"
 PERSON_NAME = "person_name"
 PERSON_PHONE_NUMBER = "person_phone_number"
 NOTIFICATION = "notification"
-DEST_MAC = "dest_mac"
+RELATION = "relation"
 NEW_PERSON_MAC = "new_" + PERSON_MAC
