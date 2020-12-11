@@ -60,12 +60,11 @@ class PostgresDB:
                 self.close()
                 return "Failed when trying to delete account. Error =>  {}".format(error)
 
-    def add_new_account(self, username: str, password: str, birthdate: str, age: int, email_confirmed_at: str, role: str):
+    def add_new_account(self, username: str, password: str, birthdate: str, age: int):
         self.connect()
         try:
             self.__execute(NEW_ACCOUNT,
-                           {USERNAME: username, PASSWORD: password, BIRTHDATE: birthdate, AGE: age, 
-                           EMAIL_CONFIRMED_AT: email_confirmed_at, ROLE: role})
+                           {USERNAME: username, PASSWORD: password, BIRTHDATE: birthdate, AGE: age})
             self.close()
         except(Exception, psycopg2.Error) as error:
             if self.conn:

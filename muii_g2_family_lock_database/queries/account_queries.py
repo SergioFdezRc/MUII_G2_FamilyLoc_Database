@@ -11,8 +11,8 @@ WHERE id = %(account_id)s;
 """
 
 NEW_ACCOUNT = """
-INSERT INTO account (username, password, birthdate, age, email_confirmed_at, role) 
-    VALUES (%(username)s, %(password)s, %(birthdate)s, %(age)s, %(email_confirmed_at)s, %(role)s);
+INSERT INTO account (username, password, birthdate, age) 
+    VALUES (%(username)s, %(password)s, %(birthdate)s, %(age)s);
 """
 
 DELETE_ACCOUNT = """
